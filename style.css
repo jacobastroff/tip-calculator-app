@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: hsl(185, 41%, 84%);
+    font-family: 'Space Mono', monospace;
+    /* overflow: hidden; */
+
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* 
+.input * {
+    width: 100%;
+} */
+
+
+.module {
+    width: 60%;
+    padding: 12rem;
+    background-color: white;
+    box-shadow: 0 0 90rem 0px black;
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+}
+
+.module .selection-label,
+.description-title {
+    display: block;
+    font-size: 4.2rem;
+    font-weight: 400;
+}
+
+.input-form .selection-label {
+    margin-bottom: 1rem;
+}
+
+.description-title {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 1.6rem;
+}
+
+.per-person {
+    color: rgb(179, 179, 179);
+    font-size: 3.6rem;
+}
+
+.total {
+    font-size: 10rem;
+    color: hsl(172, 67%, 45%);
+    font-weight: 600;
+
+}
+
+.reset-btn {
+    font-size: 4.8rem;
+    width: 100%;
+    background-color: hsl(172, 67%, 45%);
+    padding: 3.2rem 0;
+    border: 0;
+    border-radius: 2rem;
+    font-family: 'Space Mono', monospace;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: hsl(183, 100%, 15%);
+    transition: all 0.3s;
+}
+
+.allowed:hover {
+    background-color: #9FE8DF;
+    cursor: pointer;
+}
+
+.disabled {
+    cursor: not-allowed !important;
+    /* pointer-events: none; */
+    opacity: 50%;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.input-form {
+    margin-bottom: 10rem;
+    width: 100%;
+}
+
+.label-and-input {
+    display: flex;
+    align-items: center;
+    /* border: 1px solid grey; */
+    display: inline-block;
+    gap: 1rem;
+    padding: 0 4rem;
+    background-color: #e1e6e9;
+    border-radius: 2rem;
+    width: 100%;
+}
+
+.label-and-input:hover,
+.label-and-input *:hover {
+    cursor: pointer;
+}
+
+.focused {
+    border: 1px solid red;
+}
+
+.input-box {
+
+    font-size: 6.4rem;
+    padding: 1rem 0rem;
+    background-color: #e1e6e9;
+    /* width: 100%; */
+    text-align: right;
+
+    font-family: 'Space Mono', monospace;
+    border: none;
+}
+
+
+
+.input-icon {
+    /* height: 100%; */
+    padding-top: 1rem;
+    height: 5.6rem;
+    /* padding: 1rem 0; */
+    /* font-size: 10rem; */
+}
+
+.input-box::placeholder {
+    font-family: 'Space Mono', monospace;
+
+}
+
+.input-box:focus {
+    outline: none;
+}
+
+.tip-selection {
+    margin-bottom: 10rem;
+}
+
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3.4rem;
+    overflow: hidden;
+    /* width: 100%; */
+    /* justify-items: center; */
+
+}
+
+.buttons * {
+    border-radius: 10px;
+    font-size: 5.6rem;
+    font-family: 'Space Mono', monospace;
+    width: 100%;
+}
+
+.custom-tip {
+    padding: 2rem;
+    background-color: #e1e6e9;
+    border: 2px solid #e1e6e9;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+.custom-tip:focus {
+    border: 2px solid hsl(183, 100%, 15%);
+    ;
+    outline: none;
+}
+
+.tip-amount-button {
+    padding: 2rem;
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: none;
+
+
+}
+
+.tip-amount-button:hover {
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+
+}
+
+.output {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 2rem;
+    padding: 8rem;
+    justify-content: space-between;
+}
+
+.sum {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.6rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* height: 100%; */
+}
+
+.attribution {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
