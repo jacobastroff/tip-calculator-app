@@ -45,7 +45,7 @@ body {
     font-weight: 400;
 }
 
-.input-form .selection-label {
+.selection-label {
     margin-bottom: 1rem;
 }
 
@@ -109,13 +109,14 @@ body {
 .label-and-input {
     display: flex;
     align-items: center;
-    /* border: 1px solid grey; */
+    border: 1px solid #e1e6e9;
     display: inline-block;
     gap: 1rem;
     padding: 0 4rem;
     background-color: #e1e6e9;
     border-radius: 2rem;
     width: 100%;
+    transition: all 0.2s;
 }
 
 .label-and-input:hover,
@@ -123,9 +124,14 @@ body {
     cursor: pointer;
 }
 
-.focused {
-    border: 1px solid red;
+.label-and-input:hover {
+    border: 1px solid hsl(183, 100%, 15%);
 }
+
+.focused {
+    border: 1px solid hsl(183, 100%, 15%) !important;
+}
+
 
 .input-box {
 
@@ -189,10 +195,12 @@ body {
     border: 2px solid #e1e6e9;
     font-weight: 600;
     text-align: center;
+    transition: all 0.3s;
 
 }
 
-.custom-tip:focus {
+.custom-tip:focus,
+.custom-tip:hover {
     border: 2px solid hsl(183, 100%, 15%);
     ;
     outline: none;
