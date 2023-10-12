@@ -20,7 +20,10 @@
       <div class="input">
 
         <form class="input-form">
-          <label for="bill" class="selection-label">Number of people</label>
+          <div class="title-and-error">
+            <label for="bill" class="selection-label">Bill</label>
+            <p class="error-message hidden">This is a error message</p>
+          </div>
           <label for="bill" class="label-and-input">
             <label for="bill">
               <img src="images/icon-dollar.svg" alt="people" class="input-icon" />
@@ -29,17 +32,23 @@
           </label>
         </form>
         <div class="tip-selection">
-          <h3 class="selection-label">Select tip %</h3>
+          <div class="title-and-error">
+            <h3 class="selection-label">Select tip %</h3>
+            <p class="error-message hidden">This is a error message</p>
+          </div>
           <form class="buttons">
             <button class="tip-amount-button">5%</button>
             <button class="tip-amount-button">10%</button>
-            <button class="tip-amount-button">15%</button>
+            <button class="tip-amount-button active-btn">15%</button>
             <button class="tip-amount-button">25%</button>
             <button class="tip-amount-button">50%</button>
             <input class="custom-tip" placeholder="Custom" />
         </div>
         <form class="input-form">
-          <label for="people" class="selection-label">Number of people</label>
+          <div class="title-and-error">
+            <label for="people" class="selection-label">Number of people</label>
+            <p class="error-message hidden">This is a error message</p>
+          </div>
           <label for="people" class="label-and-input">
             <label for="people">
               <img src="images/icon-person.svg" alt="people" class="input-icon" />
@@ -59,13 +68,13 @@
           </div>
           <div class="sum">
             <div class="description">
-              <h4 class="description-title">Tip Amount</h4>
+              <h4 class="description-title">Total</h4>
               <span class="per-person">/ per person</span>
             </div>
             <span class="total">$0.00</span>
           </div>
         </div>
-        <button class="reset-btn allowed ">Reset</button>
+        <button class="reset-btn allowed">Reset</button>
 
       </div>
     </div>

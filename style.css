@@ -15,6 +15,10 @@ body {
 
 }
 
+.hidden {
+    displaY: none !important;
+}
+
 .input {
     display: flex;
     flex-direction: column;
@@ -40,13 +44,22 @@ body {
 
 .module .selection-label,
 .description-title {
-    display: block;
+    /* display: block; */
     font-size: 4.2rem;
     font-weight: 400;
 }
 
-.selection-label {
+.error-message {
+    font-size: 3.6rem;
+    color: red;
+}
+
+.title-and-error {
     margin-bottom: 1rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .description-title {
@@ -70,7 +83,6 @@ body {
 .reset-btn {
     font-size: 4.8rem;
     width: 100%;
-    background-color: hsl(172, 67%, 45%);
     padding: 3.2rem 0;
     border: 0;
     border-radius: 2rem;
@@ -79,6 +91,18 @@ body {
     font-weight: bold;
     color: hsl(183, 100%, 15%);
     transition: all 0.3s;
+}
+
+.reset-btn {
+    background-color: hsl(172, 67%, 45%);
+}
+
+
+.active-btn {
+    color: hsl(183, 100%, 15%) !important;
+    background-color: hsl(172, 67%, 45%) !important;
+
+
 }
 
 .allowed:hover {
