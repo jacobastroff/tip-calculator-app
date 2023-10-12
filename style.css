@@ -16,41 +16,42 @@ body {
 }
 
 .hidden {
-    displaY: none !important;
+    display: none !important;
 }
 
-.input {
+/* .input {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+} */
+input {
+    width: 100%;
+    ;
 }
 
-/* 
-.input * {
-    width: 100%;
-} */
+
 
 
 .module {
-    width: 60%;
-    padding: 12rem;
+    width: 65%;
+    padding: 3rem;
     background-color: white;
-    box-shadow: 0 0 90rem 0px black;
-    border-radius: 2rem;
+    box-shadow: 0 0 45rem 0px black;
+    border-radius: 0.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10rem;
+    gap: 2.5rem;
 }
 
 .module .selection-label,
 .description-title {
     /* display: block; */
-    font-size: 4.2rem;
+    font-size: 1.6rem;
     font-weight: 400;
 }
 
 .error-message {
-    font-size: 3.6rem;
+    font-size: 1.4rem;
     color: red;
 }
 
@@ -65,27 +66,27 @@ body {
 .description-title {
     color: #fff;
     font-weight: 600;
-    margin-bottom: 1.6rem;
+    margin-bottom: 0.8rem;
 }
 
 .per-person {
     color: rgb(179, 179, 179);
-    font-size: 3.6rem;
+    font-size: 0.9rem;
 }
 
 .total {
-    font-size: 10rem;
+    font-size: 2.5rem;
     color: hsl(172, 67%, 45%);
     font-weight: 600;
 
 }
 
 .reset-btn {
-    font-size: 4.8rem;
+    font-size: 1.6rem;
     width: 100%;
-    padding: 3.2rem 0;
+    padding: 1rem 0;
     border: 0;
-    border-radius: 2rem;
+    border-radius: 0.5rem;
     font-family: 'Space Mono', monospace;
     text-transform: uppercase;
     font-weight: bold;
@@ -126,7 +127,7 @@ body {
 }
 
 .input-form {
-    margin-bottom: 10rem;
+    margin-bottom: 2.5rem;
     width: 100%;
 }
 
@@ -134,18 +135,21 @@ body {
     display: flex;
     align-items: center;
     border: 1px solid #e1e6e9;
-    display: inline-block;
-    gap: 1rem;
-    padding: 0 4rem;
     background-color: #e1e6e9;
-    border-radius: 2rem;
+    border-radius: 0.5rem;
     width: 100%;
     transition: all 0.2s;
+    padding-left: 1rem;
 }
 
 .label-and-input:hover,
 .label-and-input *:hover {
     cursor: pointer;
+}
+
+.img-label {
+    /* position: absolute;
+    top: -50%; */
 }
 
 .label-and-input:hover {
@@ -159,22 +163,29 @@ body {
 
 .input-box {
 
-    font-size: 6.4rem;
-    padding: 1rem 0rem;
+    font-size: 1.8rem;
+    padding: 1rem 1.5rem;
     background-color: #e1e6e9;
-    /* width: 100%; */
+    width: 100%;
     text-align: right;
-
+    border-radius: 0.5rem;
     font-family: 'Space Mono', monospace;
     border: none;
 }
 
 
+.img-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .input-icon {
     /* height: 100%; */
-    padding-top: 1rem;
-    height: 5.6rem;
+    /* padding-top: 1rem; */
+    height: 1.8rem;
+    /* padding: 1rem; */
+
     /* padding: 1rem 0; */
     /* font-size: 10rem; */
 }
@@ -189,7 +200,7 @@ body {
 }
 
 .tip-selection {
-    margin-bottom: 10rem;
+    margin-bottom: 2.5rem;
 }
 
 
@@ -198,8 +209,8 @@ body {
     grid-template-columns: repeat(3, 1fr);
 
     align-items: center;
-    gap: 2rem;
-    margin-top: 3.4rem;
+    gap: 1rem;
+    margin-top: 1.7rem;
     overflow: hidden;
     /* width: 100%; */
     /* justify-items: center; */
@@ -207,14 +218,14 @@ body {
 }
 
 .buttons * {
-    border-radius: 10px;
-    font-size: 5.6rem;
+    border-radius: 0.5rem;
+    font-size: 1.8rem;
     font-family: 'Space Mono', monospace;
     width: 100%;
 }
 
 .custom-tip {
-    padding: 2rem;
+    padding: 1rem;
     background-color: #e1e6e9;
     border: 2px solid #e1e6e9;
     font-weight: 600;
@@ -225,13 +236,13 @@ body {
 
 .custom-tip:focus,
 .custom-tip:hover {
-    border: 2px solid hsl(183, 100%, 15%);
+    border: 1px solid hsl(183, 100%, 15%);
     ;
     outline: none;
 }
 
 .tip-amount-button {
-    padding: 2rem;
+    padding: 1rem;
     background-color: hsl(183, 100%, 15%);
     color: white;
     font-weight: 600;
@@ -252,8 +263,8 @@ body {
     display: flex;
     flex-direction: column;
     background-color: hsl(183, 100%, 15%);
-    border-radius: 2rem;
-    padding: 8rem;
+    border-radius: 0.5rem;
+    padding: 4rem;
     justify-content: space-between;
 }
 
@@ -261,7 +272,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 3.6rem;
+    margin-bottom: 1.8rem;
 }
 
 .content {

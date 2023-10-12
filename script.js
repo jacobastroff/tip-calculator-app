@@ -107,8 +107,3 @@ resetBtn.addEventListener('click', function () {
 
     })
 })
-// document.addEventListener('click', function (e) {
-//     if (!e.target.classList.contains('.label-and-input')) {
-//         forms.forEach((_, i) => inputBoxes[i].classList.remove('focused'))
-//     }
-// })
