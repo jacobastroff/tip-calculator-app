@@ -227,7 +227,7 @@ input {
 .custom-tip {
     padding: 1rem;
     background-color: #e1e6e9;
-    border: 2px solid #e1e6e9;
+    border: 1px solid #e1e6e9;
     font-weight: 600;
     text-align: center;
     transition: all 0.3s;
