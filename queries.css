@@ -1,0 +1,55 @@
+@media (max-width:24em) {
+    html {
+        font-size: 50%;
+    }
+
+    body {
+        /* overflow: hidden; */
+        /* background-color: white; */
+    }
+
+    .container {
+        margin-top: 4.6rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 4fr;
+        width: 100%;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .logo {
+
+        margin: 3.6rem auto;
+
+        /* height: 10vh; */
+    }
+
+    .module {
+
+        width: 100%;
+        display: block;
+        /* height: auto; */
+        align-self: stretch;
+        /* padding: 0; */
+    }
+
+    .output {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 3rem;
+    }
+
+    .output h3 {
+        font-size: 4.8rem;
+    }
+
+    .buttons {
+        grid-template-columns: 1fr 1fr;
+        /* justify-items: center; */
+    }
+
+    .buttons * {
+        /* width: 75%; */
+    }
+}
