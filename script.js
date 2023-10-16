@@ -90,8 +90,10 @@ tipSelectionForm.addEventListener('submit', changeActiveButton)
 inputBoxes.forEach(input => input.addEventListener('change', tipCalculation))
 forms.forEach(form => form.addEventListener('submit', (e) => e.preventDefault()))
 document.querySelectorAll('.tip-amount-button').forEach(button => button.addEventListener('click', changeActiveButton))
+document.querySelectorAll('.tip-amount-button').forEach(button => button.addEventListener('touch', changeActiveButton))
+
 console.log(resetBtn)
-resetBtn.addEventListener('click', function () {
+const resetUI = function () {
     document.querySelectorAll('input').forEach(input => {
         input.blur()
         input.value = '';
@@ -106,4 +108,6 @@ resetBtn.addEventListener('click', function () {
         document.querySelectorAll('.error-message').forEach(errorText => errorText.classList.add('hidden'))
 
     })
-})
+}
+resetBtn.addEventListener('click', resetUI)
+resetBtn.addEventListener('touch', resetUI)
