@@ -111,8 +111,8 @@ const resetUI = function () {
 console.log(window)
 if (window.innerWidth < 16 * 30) {
     // console.log(true)
-    resetBtn.addEventListener('hover', resetUI)
-    document.querySelectorAll('.tip-amount-button').forEach(button => button.addEventListener('hover', changeActiveButton))
+    resetBtn.addEventListener('ontouchstart', resetUI)
+    document.querySelectorAll('.tip-amount-button').forEach(button => button.addEventListener('ontouchstart', changeActiveButton))
 
 }
 // else {
