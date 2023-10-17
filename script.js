@@ -29,20 +29,23 @@ let curTipSelectionAmount = Number.parseInt(curTipSelectionElement.textContent) 
 const changeActiveButton = function (e) {
     console.log(e)
     e.preventDefault();
-    document.querySelector('body').style.backgroundColor = 'red'
     const errorText = e.target.parentElement.parentElement.querySelector('.error-message')
     console.log(errorText)
     if (e.target.closest('.tip-amount-button') && e.pointerType.length > 0) {
         curTipSelectionElement = e.target;
-        curTipSelectionAmount = Number.parseInt(e.target.textContent) / 100
-        curTipSelectionElement.blur();
+        curTipSelectionAmount = Number.parseInt(e.target.textContent) / 100;
         errorText.classList.add('hidden')
+        curTipSelectionElement.blur();
+        document.querySelector('body').style.backgroundColor = 'red'
+
     }
     else if (e.target.closest('.custom-tip')) {
         if (!Number.isNaN(Number.parseInt(e.target.value))) {
             curTipSelectionElement = e.target;
             curTipSelectionAmount = Number.parseInt(e.target.value) / 100
             errorText.classList.add('hidden')
+            curTipSelectionElement.blur();
+
 
 
         }
