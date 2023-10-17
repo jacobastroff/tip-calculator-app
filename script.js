@@ -90,7 +90,6 @@ tipSelectionForm.addEventListener('submit', changeActiveButton)
 inputBoxes.forEach(input => input.addEventListener('change', tipCalculation))
 forms.forEach(form => form.addEventListener('submit', (e) => e.preventDefault()))
 document.querySelectorAll('.tip-amount-button').forEach(button => button.addEventListener('click', changeActiveButton))
-document.querySelectorAll('.tip-amount-button').forEach(button => button.addEventListener('touchstart', changeActiveButton))
 
 console.log(resetBtn)
 const resetUI = function () {
@@ -109,5 +108,14 @@ const resetUI = function () {
 
     })
 }
+console.log(window)
+if (window.innerWidth < 16 * 30) {
+    // console.log(true)
+    resetBtn.addEventListener('hover', resetUI)
+    document.querySelectorAll('.tip-amount-button').forEach(button => button.addEventListener('hover', changeActiveButton))
+
+}
+// else {
+//     console.log(false)
+// }
 resetBtn.addEventListener('click', resetUI)
-resetBtn.addEventListener('touchstart', resetUI)
