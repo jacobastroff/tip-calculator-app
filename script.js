@@ -32,7 +32,9 @@ const changeActiveButton = function (e) {
     const errorText = e.target.parentElement.parentElement.querySelector('.error-message')
     console.log(errorText)
     console.log(window.innerWidth)
-    if (e.target.closest('.tip-amount-button') && (e.pointerType.length > 0 || window.innerWidth < 1000)) {
+    if (e.target.closest('.tip-amount-button')
+        // && (e.pointerType.length > 0 || window.innerWidth < 1000)
+    ) {
         curTipSelectionElement = e.target;
         curTipSelectionAmount = Number.parseInt(e.target.textContent) / 100;
         errorText.classList.add('hidden')
