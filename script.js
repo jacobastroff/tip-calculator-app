@@ -1,4 +1,4 @@
-const forms = document.querySelectorAll('.input-form');
+const forms = document.querySelectorAll('form');
 const inputBoxes = document.querySelectorAll('.label-and-input');
 const tipSelectionForm = document.querySelector('.tip-selection')
 const resetBtn = document.querySelector('.reset-btn');
