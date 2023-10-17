@@ -30,14 +30,12 @@ const changeActiveButton = function (e) {
     console.log(e)
     e.preventDefault();
     const errorText = e.target.parentElement.parentElement.querySelector('.error-message')
-    document.querySelector('label').textContent = window.innerWidth
     if (e.target.closest('.tip-amount-button')
         && (e?.pointerType?.length > 0 || Number(window.innerWidth) < 1000)
     ) {
         curTipSelectionElement = e.target;
         curTipSelectionAmount = Number.parseInt(e.target.textContent) / 100;
         errorText.classList.add('hidden')
-        document.querySelector('body').style.backgroundColor = 'red'
 
     }
     else if (e.target.closest('.custom-tip')) {
