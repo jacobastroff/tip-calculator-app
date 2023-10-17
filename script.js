@@ -30,29 +30,37 @@ const changeActiveButton = function (e) {
     console.log(e)
     e.preventDefault();
     const errorText = e.target.parentElement.parentElement.querySelector('.error-message')
-    if (e.target.closest('.tip-amount-button')
-        && (e?.pointerType?.length > 0 || Number(window.innerWidth) < 1000)
-    ) {
-        curTipSelectionElement = e.target;
-        curTipSelectionAmount = Number.parseInt(e.target.textContent) / 100;
+    if (e.type === 'submit') {
+        curTipSelectionElement = document.querySelector('.custom-tip');
+        curTipSelectionAmount = Number.parseInt(curTipSelectionElement.value) / 100;
         errorText.classList.add('hidden')
-
     }
-    else if (e.target.closest('.custom-tip')) {
-        if (!Number.isNaN(Number.parseInt(e.target.value))) {
+    else {
+        if (e.target.closest('.tip-amount-button')
+            && (e?.pointerType?.length > 0 || Number(window.innerWidth) < 1000)
+        ) {
             curTipSelectionElement = e.target;
-            curTipSelectionAmount = Number.parseInt(e.target.value) / 100
+            curTipSelectionAmount = Number.parseInt(e.target.textContent) / 100;
             errorText.classList.add('hidden')
-            curTipSelectionElement.blur();
-
-
 
         }
-        else {
-            errorText.classList.remove('hidden')
-            errorText.textContent = 'Invalid input'
+        else if (e.target.closest('.custom-tip')) {
+            if (!Number.isNaN(Number.parseInt(e.target.value))) {
+                curTipSelectionElement = e.target;
+                curTipSelectionAmount = Number.parseInt(e.target.value) / 100
+                errorText.classList.add('hidden')
+                curTipSelectionElement.blur();
+
+
+
+            }
+            else {
+                errorText.classList.remove('hidden')
+                errorText.textContent = 'Invalid input'
+            }
         }
     }
+
 
     document.querySelectorAll('.tip-amount-button').forEach(button => button.classList.remove('active-btn'))
     document.querySelector('.custom-tip').classList.remove('active-btn')
@@ -112,6 +120,7 @@ const resetUI = function () {
     })
 }
 console.log(window)
+document.querySelector('.buttons').addEventListener('submit', changeActiveButton)
 // console.log(true)
 // resetBtn.addEventListener('touchstart', resetUI)
 // document.querySelectorAll('.tip-amount-button').forEach(button => {
