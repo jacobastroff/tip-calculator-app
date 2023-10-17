@@ -89,7 +89,7 @@ const tipCalculation = function () {
 }
 // document.querySelectorAll('tip-amount-button').forEach(button => button.blur())
 document.querySelector('.custom-tip').addEventListener('change', changeActiveButton)
-tipSelectionForm.addEventListener('submit', changeActiveButton)
+// tipSelectionForm.addEventListener('submit', changeActiveButton)
 inputBoxes.forEach(input => input.addEventListener('change', tipCalculation))
 forms.forEach(form => form.addEventListener('submit', (e) => e.preventDefault()))
 document.querySelectorAll('.tip-amount-button').forEach(button => button.addEventListener('click', changeActiveButton))
