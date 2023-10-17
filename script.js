@@ -29,6 +29,7 @@ let curTipSelectionAmount = Number.parseInt(curTipSelectionElement.textContent) 
 const changeActiveButton = function (e) {
     console.log(e)
     e.preventDefault();
+    document.querySelector('body').style.backgroundColor = 'red'
     const errorText = e.target.parentElement.parentElement.querySelector('.error-message')
     console.log(errorText)
     if (e.target.closest('.tip-amount-button') && e.pointerType.length > 0) {
