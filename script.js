@@ -30,10 +30,9 @@ const changeActiveButton = function (e) {
     console.log(e)
     e.preventDefault();
     const errorText = e.target.parentElement.parentElement.querySelector('.error-message')
-    console.log(errorText)
-    console.log(window.innerWidth)
+    document.querySelector('label').textContent = window.innerWidth
     if (e.target.closest('.tip-amount-button')
-        // && (e.pointerType.length > 0 || window.innerWidth < 1000)
+        && (e.pointerType.length > 0)
     ) {
         curTipSelectionElement = e.target;
         curTipSelectionAmount = Number.parseInt(e.target.textContent) / 100;
@@ -116,10 +115,10 @@ const resetUI = function () {
 }
 console.log(window)
 // console.log(true)
-resetBtn.addEventListener('touchstart', resetUI)
-document.querySelectorAll('.tip-amount-button').forEach(button => {
-    button.addEventListener('touchstart', changeActiveButton);
-});
+// resetBtn.addEventListener('touchstart', resetUI)
+// document.querySelectorAll('.tip-amount-button').forEach(button => {
+//     button.addEventListener('touchstart', changeActiveButton);
+// });
 
 // else {
 //     console.log(false)
