@@ -109,13 +109,14 @@ const resetUI = function () {
     })
 }
 console.log(window)
-if (window.innerWidth < 16 * 30) {
-    // console.log(true)
-    resetBtn.addEventListener('ontouchstart', resetUI)
-    document.querySelectorAll('.tip-amount-button').forEach(button => button.addEventListener('ontouchstart', changeActiveButton))
+// console.log(true)
+resetBtn.addEventListener('touchstart', resetUI)
+document.querySelectorAll('.tip-amount-button').forEach(button => {
+    button.addEventListener('touchstart', changeActiveButton);
+});
 
-}
 // else {
 //     console.log(false)
 // }
 resetBtn.addEventListener('click', resetUI)
+// resetBtn.addEventListener('touchstart', resetUI)
